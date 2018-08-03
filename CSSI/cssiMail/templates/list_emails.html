@@ -1,0 +1,9 @@
+list emails
+
+<ul>
+
+{% for email in emails%}
+<li>  {{email.sender}} <a href= "/ViewEmails?sender={{email.sender}}&subject={{email.subject}}&content={{email.content}}&image={{email.image}}">({{email.subject}})</a> </li>
+{% endfor %}
+
+</ul

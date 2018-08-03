@@ -1,0 +1,32 @@
+div{
+  padding: 50px;
+}
+
+#title{
+  background:black;
+}
+
+#content{
+  background:red;
+  display:flex;
+  flex-direction: row;
+}
+
+#left{
+  background:darkgreen;
+    flex: 1 0 auto;
+}
+
+#right{
+  background: lightgreen;
+  flex: 3 0 auto;
+}
+
+#info{
+  background: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 0 0 4px black;
+
+}
+</style>

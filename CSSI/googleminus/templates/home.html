@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<title>google-</title>
+<h1>welcome to google-</h1>
+
+<div>
+  {%if current_user %}
+    welcome {{current_user.email}}
+    <a href='{{logout_url}}'> log out </a>
+    {%else%}
+      <a href='{{login_url}}'> log in </a>
+    {%endif%}
+
+</div>
+
+{%if current_user and not current_person%}
+  <form action='/create' method='post'>
+    your name: <input name='name'><br>
+    bio: <input name='biography'><br>
+    <button>Create Profile</button>
+  </form>
+{%endif%}
+
+{%for person in people%}
+  <li><a href='/profile?key={{person.key.urlsafe()}}'>{{person.name}}</a></li>
+
+{%endfor%}
